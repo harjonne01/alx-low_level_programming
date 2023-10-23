@@ -4,7 +4,7 @@
 
 /**
  * pre_main - prints a sentence before the main
- *
+ * function is executed
  */
 void pre_main(void)
 {
