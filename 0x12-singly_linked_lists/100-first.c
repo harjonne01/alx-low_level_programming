@@ -3,7 +3,7 @@
 void first(void) __attribute__ ((constructor));
 
 /**
- * pre_main - prints a sentence before the main
+ * first - prints a sentence before the main
  * function is executed
  */
 
