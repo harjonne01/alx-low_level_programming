@@ -28,13 +28,13 @@ int create_file(const char *filename, char *text_content)
 	}
 
 	length_text = 0;
-	while (text_content[length_text] != NULL)
+	while (text_content[length_text] != '\0')
 	{
 		length_text++;
 	}
 
 	written_bytes = write(fd, text_content, length_text);
-	if (written_bytes < 0)
+	if (written_bytes == -1)
 	{
 		close(fd);
 		return (-1);
