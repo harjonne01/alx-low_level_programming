@@ -14,14 +14,14 @@ int create_file(const char *filename, char *text_content)
 {
 	int fd;
 	int length_text;
-	ssize_t written_bytes;
+	int written_bytes;
 
 	if (filename == NULL)
 	{
 		return (-1);
 	}
 
-	fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+	fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, S_IRUSR | S_IWUSR);
 	if (fd == -1)
 	{
 		return (-1);
