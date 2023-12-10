@@ -7,9 +7,11 @@
  * Return: number of elements
  */
 
-size_t dlistint_len(const dlistint_t *h);
+size_t dlistint_len(const dlistint_t *h)
 {
 	size_t new_node;
+
+	new_node = 0;
 
 	while (h != NULL)
 	{
